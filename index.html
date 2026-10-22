@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0b0b">
+<title>No Clima Beer | Cardápio Digital</title>
+<style>
+:root{--bg:#090909;--panel:#151515;--gold:#d8a832;--gold2:#ffda72;--muted:#b9b9b9;--line:#34302a;--green:#25d366}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at top,#282116 0,#090909 42rem);color:#f7f4ed;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:inherit}.wrap{width:min(1120px,100% - 28px);margin:auto}.topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:15px 0}.brand{display:flex;align-items:center;gap:12px;min-width:0}.brand img{width:58px;height:58px;object-fit:cover;border-radius:50%;border:2px solid var(--gold)}.brand strong{display:block;letter-spacing:.08em}.brand small{color:var(--gold2)}.cart-btn,.btn{border:0;border-radius:999px;padding:12px 17px;font-weight:800;cursor:pointer}.cart-btn{background:#211b10;color:var(--gold2);border:1px solid #6b5421;white-space:nowrap}.hero{padding:25px 0 28px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:25px}.eyebrow{color:var(--gold2);font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.hero h1{font-size:clamp(2.2rem,6vw,4.7rem);line-height:.98;margin:12px 0}.hero h1 span{color:var(--gold2)}.hero p{color:#d0cbc0;line-height:1.6;max-width:550px}.hero-art{border:1px solid #59451e;border-radius:26px;padding:15px;background:linear-gradient(145deg,#211b10,#080808);text-align:center}.hero-art img{width:min(100%,330px);aspect-ratio:1;object-fit:cover;border-radius:50%;filter:drop-shadow(0 15px 30px #000)}.hero-art .tag{color:var(--gold2);font-weight:800;letter-spacing:.12em;margin-top:8px}.notice{border:1px solid #6b5421;background:#1c170e;color:#f0dfb4;padding:12px 15px;border-radius:14px;font-size:.9rem;margin:8px 0 24px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:20px 0}.search{flex:1;min-width:190px;background:#141414;color:white;border:1px solid var(--line);border-radius:12px;padding:13px}.chips{display:flex;gap:8px;overflow:auto;padding:2px 0 10px}.chip{background:#171717;border:1px solid #393329;color:#eee;border-radius:999px;padding:9px 13px;white-space:nowrap;cursor:pointer}.chip.active{background:var(--gold);color:#100d07;border-color:var(--gold);font-weight:800}.section-title{display:flex;align-items:end;justify-content:space-between;gap:10px;margin:22px 0 14px}.section-title h2{margin:0;font-size:1.45rem}.section-title p{margin:4px 0 0;color:var(--muted);font-size:.9rem}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.product{border:1px solid #302a20;background:linear-gradient(150deg,#191919,#101010);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}.product .photo{height:145px;background:linear-gradient(135deg,#302513,#101010);display:grid;place-items:center;font-size:2.5rem;color:var(--gold2)}.product .body{padding:14px;display:flex;flex-direction:column;gap:9px;flex:1}.category{color:var(--gold2);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800}.product h3{margin:0;font-size:1.05rem}.product p{margin:0;color:var(--muted);font-size:.86rem;line-height:1.45}.price{font-weight:900;font-size:1.1rem;color:var(--gold2)}.price.pending{font-size:.85rem;color:#c9c2b5;font-weight:600}.add{margin-top:auto;background:var(--gold);color:#100d07;padding:11px;border:0;border-radius:11px;font-weight:900;cursor:pointer}.add:disabled{opacity:.45;cursor:not-allowed}.empty{padding:22px;color:var(--muted);border:1px dashed #4c412c;border-radius:14px}.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:30px 0}.info{background:#141414;border:1px solid var(--line);border-radius:16px;padding:17px}.info b{display:block;color:var(--gold2);margin-bottom:7px}.info p{margin:0;color:#d1ccc1;line-height:1.5;font-size:.9rem}.footer{border-top:1px solid var(--line);padding:25px 0 95px;color:var(--muted);font-size:.85rem}.footer strong{color:var(--gold2)}.cart-panel{position:fixed;z-index:5;inset:0;background:#000b;display:none;align-items:flex-end;justify-content:center}.cart-panel.open{display:flex}.cart{background:#121212;border:1px solid #5a4825;border-radius:22px 22px 0 0;padding:20px;width:min(650px,100%);max-height:90vh;overflow:auto;box-shadow:0 -20px 70px #000}.cart-head{display:flex;justify-content:space-between;align-items:center}.cart-head h2{margin:0}.close{background:#292929;border:0;color:white;border-radius:50%;width:38px;height:38px;font-size:1.2rem}.cart-line{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;border-bottom:1px solid #302b22;padding:12px 0}.qty{display:flex;align-items:center;gap:8px}.qty button{background:#2a251a;color:var(--gold2);border:1px solid #51401f;border-radius:7px;width:27px;height:27px}.field{display:grid;gap:6px;margin:12px 0}.field label{font-size:.85rem;color:#d8d1c2}.field input,.field select,.field textarea{width:100%;padding:12px;border-radius:10px;background:#1b1b1b;border:1px solid #40392d;color:white;font:inherit}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.total{display:flex;justify-content:space-between;font-size:1.1rem;font-weight:900;padding:15px 0;color:var(--gold2)}.btn{width:100%;background:var(--green);color:#06240f;font-size:1rem}.small{font-size:.78rem;color:var(--muted);line-height:1.45}.age{font-size:.75rem;color:#a9a9a9;text-align:center;margin-top:10px}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:12px}.hero-art{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product .photo{height:115px}.product .body{padding:11px}.info-grid{grid-template-columns:1fr}.topbar{padding-top:10px}.brand img{width:48px;height:48px}.two{grid-template-columns:1fr}}
+@media(max-width:390px){.grid{grid-template-columns:1fr}.product{display:grid;grid-template-columns:95px 1fr}.product .photo{height:100%;min-height:150px}.product .body{padding:12px}.cart-btn{padding:10px 12px}}
+</style>
+</head>
+<body>
+<header class="wrap topbar">
+  <div class="brand">
+    <img src="logo.jpg" alt="Logo No Clima Beer" onerror="this.style.display='none'">
+    <div><strong>NO CLIMA BEER</strong><small>Adega e Tabacaria</small></div>
+  </div>
+  <button class="cart-btn" id="openCart" aria-label="Abrir carrinho">🛒 Carrinho <span id="cartCount">0</span></button>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Seu próximo brinde começa aqui</div>
+      <h1>Hoje combina com <span>No Clima.</span></h1>
+      <p>Confira o cardápio, escolha seus produtos e envie o pedido diretamente pelo WhatsApp. Consulte a disponibilidade e a taxa de entrega antes de concluir.</p>
+      <a class="btn" style="display:inline-block;text-decoration:none;width:auto;background:var(--gold);color:#120e06" href="#cardapio">Ver cardápio ↓</a>
+    </div>
+    <div class="hero-art"><img src="logo.jpg" alt="No Clima Beer" onerror="this.style.display='none'"><div class="tag">PRETO • DOURADO • NO CLIMA</div></div>
+  </section>
+  <div class="notice">⚠️ CATÁLOGO DE DEMONSTRAÇÃO PARA APROVAÇÃO: todos os preços abaixo são fictícios e servem apenas para avaliar o layout. Não divulgar nem aceitar pedidos com estes valores antes da confirmação da adega.</div>
+  <section id="cardapio">
+    <div class="section-title"><div><h2>Nosso cardápio</h2><p>Encontre sua bebida favorita.</p></div></div>
+    <div class="toolbar"><input class="search" id="search" type="search" placeholder="Buscar produto..." aria-label="Buscar produto"><button class="chip active" data-filter="Todos">Todos</button></div>
+    <div class="chips" id="chips"></div>
+    <div class="grid" id="products"></div>
+  </section>
+  <section class="info-grid">
+    <div class="info"><b>📍 Onde estamos</b><p>Rua Manoel Silveira Camargo, 99<br>Jardim Santana, Itu – SP</p></div>
+    <div class="info"><b>🕒 Horário de funcionamento</b><p>Segunda a sexta: 14h às 00h<br>Sábado e domingo: 12h às 01h</p></div>
+    <div class="info"><b>🚚 Entrega e retirada</b><p>Delivery com taxa conforme o bairro ou retirada no balcão. Confirme a taxa e a disponibilidade pelo WhatsApp.</p></div>
+  </section>
+</main>
+<footer class="footer"><div class="wrap"><strong>No Clima Beer</strong> · Cardápio digital<br><a href="https://www.instagram.com/noclimabeer/" target="_blank" rel="noopener">Instagram @noclimabeer</a> · <a href="https://wa.me/5511932923317" target="_blank" rel="noopener">WhatsApp para pedidos</a><div class="age">Venda de bebidas alcoólicas proibida para menores de 18 anos. Beba com responsabilidade.</div></div></footer>
+
+<div class="cart-panel" id="cartPanel" role="dialog" aria-modal="true" aria-label="Carrinho de compras">
+  <div class="cart">
+    <div class="cart-head"><h2>Seu pedido</h2><button class="close" id="closeCart" aria-label="Fechar carrinho">×</button></div>
+    <div id="cartItems"></div>
+    <div class="total"><span>Subtotal dos produtos</span><span id="subtotal">R$ 0,00</span></div>
+    <div class="field"><label for="fulfillment">Como deseja receber?</label><select id="fulfillment"><option value="Delivery">Delivery</option><option value="Retirada no balcão">Retirada no balcão</option></select></div>
+    <div id="deliveryFields">
+      <div class="two"><div class="field"><label for="customer">Seu nome</label><input id="customer" autocomplete="name" placeholder="Nome"></div><div class="field"><label for="phone">Seu telefone</label><input id="phone" inputmode="tel" placeholder="(11) 99999-9999"></div></div>
+      <div class="two"><div class="field"><label for="neighborhood">Bairro</label><input id="neighborhood" placeholder="Bairro de entrega"></div><div class="field"><label for="address">Rua e número</label><input id="address" placeholder="Endereço de entrega"></div></div>
+      <div class="field"><label for="reference">Complemento / referência (opcional)</label><input id="reference" placeholder="Casa, apartamento, ponto de referência"></div>
+    </div>
+    <div class="field"><label for="payment">Forma de pagamento</label><select id="payment"><option>Pix</option><option>Dinheiro</option><option>Cartão</option></select></div>
+    <div class="field"><label for="notes">Observações (opcional)</label><textarea id="notes" rows="2" placeholder="Ex.: troco para R$ 100"></textarea></div>
+    <p class="small">A taxa de entrega não está incluída no subtotal. A adega confirmará o valor do frete e a disponibilidade no WhatsApp.</p>
+    <button class="btn" id="sendOrder">Enviar pedido pelo WhatsApp</button>
+    <p class="small">Ao enviar, o WhatsApp será aberto com a mensagem preenchida. O pedido só será confirmado após resposta da adega.</p>
+  </div>
+</div>
+<script>
+const WHATSAPP = "5511932923317"; // Número informado no briefing
+const categories = ["Cervejas","Whisky","Vodka","Gin","Destilados","Energéticos","Refrigerantes","Água","Drinks","Combos e promoções"];
+// Cadastre os produtos reais abaixo: preço em reais. Não foram inventados preços.
+const products = [
+ {id:1,name:"Heineken Long Neck 330 ml",category:"Cervejas",description:"Long neck • unidade",price:8.50,icon:"🍺"},
+ {id:2,name:"Heineken Lata 350 ml",category:"Cervejas",description:"Lata • unidade",price:5.50,icon:"🍺"},
+ {id:3,name:"Brahma Duplo Malte 350 ml",category:"Cervejas",description:"Lata • unidade",price:4.00,icon:"🍺"},
+ {id:4,name:"Skol Pilsen 350 ml",category:"Cervejas",description:"Lata • unidade",price:3.75,icon:"🍺"},
+ {id:5,name:"Budweiser Long Neck 330 ml",category:"Cervejas",description:"Long neck • unidade",price:7.00,icon:"🍺"},
+ {id:6,name:"Corona Extra 330 ml",category:"Cervejas",description:"Long neck • unidade",price:8.50,icon:"🍺"},
+ {id:7,name:"Whisky Red Label 1 L",category:"Whisky",description:"Garrafa • 1 litro",price:119.90,icon:"🥃"},
+ {id:8,name:"Whisky Jack Daniel's 1 L",category:"Whisky",description:"Garrafa • 1 litro",price:169.90,icon:"🥃"},
+ {id:9,name:"Vodka Smirnoff 998 ml",category:"Vodka",description:"Garrafa • 998 ml",price:39.90,icon:"🍸"},
+ {id:10,name:"Vodka Absolut 1 L",category:"Vodka",description:"Garrafa • 1 litro",price:89.90,icon:"🍸"},
+ {id:11,name:"Gin Seagers 1 L",category:"Gin",description:"Garrafa • 1 litro",price:49.90,icon:"🍸"},
+ {id:12,name:"Gin Tanqueray 750 ml",category:"Gin",description:"Garrafa • 750 ml",price:119.90,icon:"🍸"},
+ {id:13,name:"Cachaça 51 965 ml",category:"Destilados",description:"Garrafa • 965 ml",price:17.90,icon:"🥃"},
+ {id:14,name:"Energético Red Bull 250 ml",category:"Energéticos",description:"Lata • unidade",price:9.00,icon:"⚡"},
+ {id:15,name:"Energético Monster 473 ml",category:"Energéticos",description:"Lata • unidade",price:10.00,icon:"⚡"},
+ {id:16,name:"Coca-Cola 2 L",category:"Refrigerantes",description:"Garrafa • 2 litros",price:11.00,icon:"🥤"},
+ {id:17,name:"Guaraná Antarctica 2 L",category:"Refrigerantes",description:"Garrafa • 2 litros",price:9.00,icon:"🥤"},
+ {id:18,name:"Água mineral 500 ml",category:"Água",description:"Com ou sem gás • unidade",price:3.00,icon:"💧"},
+ {id:19,name:"Combo Vodka + 2 Energéticos",category:"Combos e promoções",description:"Sugestão de combo para avaliação • composição a confirmar",price:59.90,icon:"✨"},
+ {id:20,name:"Combo 6 Long Necks",category:"Combos e promoções",description:"Seleção de long necks • marcas a confirmar",price:42.00,icon:"✨"},
+ {id:21,name:"Combo Whisky + Refrigerante",category:"Combos e promoções",description:"Sugestão de combo • marcas e itens a confirmar",price:139.90,icon:"✨"},
+ {id:22,name:"Drink Gin Tônica",category:"Drinks",description:"Dose preparada • receita e volume a confirmar",price:24.90,icon:"🍹"},
+ {id:23,name:"Drink Moscow Mule",category:"Drinks",description:"Dose preparada • receita e volume a confirmar",price:27.90,icon:"🍹"},
+ {id:24,name:"Drink Caipirinha",category:"Drinks",description:"Dose preparada • fruta e destilado a confirmar",price:19.90,icon:"🍹"}
+];
+let cart = {};
+let activeCategory = "Todos";
+const money = v => v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const $ = id => document.getElementById(id);
+function renderChips(){
+  $("chips").innerHTML = categories.map(c=>`<button class="chip ${activeCategory===c?"active":""}" data-filter="${c}">${c}</button>`).join("");
+  document.querySelectorAll("[data-filter]").forEach(b=>b.addEventListener("click",()=>{activeCategory=b.dataset.filter;document.querySelectorAll("[data-filter]").forEach(x=>x.classList.toggle("active",x.dataset.filter===activeCategory));renderProducts()}));
+}
+function renderProducts(){
+  const q=$("search").value.trim().toLowerCase();
+  const list=products.filter(p=>(activeCategory==="Todos"||p.category===activeCategory)&&(`${p.name} ${p.category} ${p.description}`).toLowerCase().includes(q));
+  $("products").innerHTML=list.map(p=>`<article class="product"><div class="photo" aria-hidden="true">${p.icon}</div><div class="body"><div class="category">${p.category}</div><h3>${p.name}</h3><p>${p.description}</p><div class="price pending">${p.price==null?"Preço a confirmar":money(p.price)}</div><button class="add" data-add="${p.id}" ${p.price==null?"disabled":""}>${p.price==null?"Aguardando cadastro":"Adicionar ao carrinho"}</button></div></article>`).join("")||'<div class="empty">Nenhum produto encontrado.</div>';
+  document.querySelectorAll("[data-add]").forEach(b=>b.addEventListener("click",()=>add(+b.dataset.add)));
+}
+function add(id){if(products.find(p=>p.id===id)?.price==null)return;cart[id]=(cart[id]||0)+1;renderCart()}
+function change(id,delta){cart[id]=(cart[id]||0)+delta;if(cart[id]<=0)delete cart[id];renderCart()}
+function renderCart(){
+ const entries=Object.entries(cart);
+ $("cartCount").textContent=entries.reduce((n,[,q])=>n+q,0);
+ $("cartItems").innerHTML=entries.length?entries.map(([id,q])=>{const p=products.find(x=>x.id===+id);return `<div class="cart-line"><div><b>${p.name}</b><div class="small">${money(p.price)} cada</div></div><div class="qty"><button data-change="${id}" data-delta="-1">−</button><span>${q}</span><button data-change="${id}" data-delta="1">+</button></div><b>${money(p.price*q)}</b></div>`}).join(""):'<p class="empty">Seu carrinho está vazio. Os produtos estarão disponíveis quando os preços forem cadastrados.</p>';
+ $("subtotal").textContent=money(entries.reduce((n,[id,q])=>n+products.find(p=>p.id===+id).price*q,0));
+ document.querySelectorAll("[data-change]").forEach(b=>b.addEventListener("click",()=>change(+b.dataset.change,+b.dataset.delta)));
+}
+$("openCart").onclick=()=>{$("cartPanel").classList.add("open")};
+$("closeCart").onclick=()=>{$("cartPanel").classList.remove("open")};
+$("cartPanel").addEventListener("click",e=>{if(e.target===$("cartPanel"))$("cartPanel").classList.remove("open")});
+$("search").addEventListener("input",renderProducts);
+$("fulfillment").addEventListener("change",()=>{$("deliveryFields").style.display=$("fulfillment").value==="Delivery"?"block":"none"});
+$("sendOrder").onclick=()=>{
+ const entries=Object.entries(cart); if(!entries.length){alert("Adicione produtos com preços cadastrados antes de enviar o pedido.");return}
+ const mode=$("fulfillment").value, name=$("customer").value.trim(), phone=$("phone").value.trim();
+ if(!name){alert("Informe seu nome.");$("customer").focus();return}
+ if(mode==="Delivery"&&!$("neighborhood").value.trim()){alert("Informe o bairro para consultar a taxa de entrega.");$("neighborhood").focus();return}
+ if(mode==="Delivery"&&!$("address").value.trim()){alert("Informe o endereço de entrega.");$("address").focus();return}
+ const lines=entries.map(([id,q])=>{const p=products.find(x=>x.id===+id);return `• ${p.name} x${q} — ${money(p.price*q)}`});
+ const subtotal=entries.reduce((n,[id,q])=>n+products.find(p=>p.id===+id).price*q,0);
+ const details=mode==="Delivery"?`Bairro: ${$("neighborhood").value.trim()}\nEndereço: ${$("address").value.trim()}\nComplemento: ${$("reference").value.trim()||"Não informado"}`:"Retirada no balcão";
+ const msg=`Olá, No Clima Beer! Gostaria de fazer um pedido:\n\n${lines.join("\n")}\n\nSubtotal: ${money(subtotal)}\nModalidade: ${mode}\n${details}\nNome: ${name}\nTelefone: ${phone||"Não informado"}\nPagamento: ${$("payment").value}\nObservações: ${$("notes").value.trim()||"Nenhuma"}\n\nPor favor, confirme disponibilidade e, se for delivery, a taxa de entrega.`;
+ window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`,"_blank","noopener");
+};
+renderChips();renderProducts();renderCart();
+</script>
+</body>
+</html>
